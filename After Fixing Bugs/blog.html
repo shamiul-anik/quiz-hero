@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Blog - Quiz Hero</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              common: ["Rubik", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-white font-common">
+    <!-- Header/Navbar section start -->
+    <header class="h-16 flex items-center shadow-sm">
+      <nav class="flex justify-between items-center w-9/12 mx-auto">
+        <div class="text-zinc-800 font-bold uppercase">
+          <h1 class="text-lg">Quiz <span class="text-green-700">HERO</span> Blog</h1>
+        </div>
+        <button onclick="window.open('index.html', '_blank')" class="bg-green-600 font-light text-sm px-5 py-1 rounded text-white">
+          Quiz
+        </button>
+      </nav>
+    </header>
+    <!-- Header/Navbar section end -->
+
+    <!-- Question and Answer Section Starts Here -->
+    <section class="md:w-9/12 w-[90%] md:flex-row flex-col mx-auto my-20">
+      <div class="w-full">
+        <div class="duration-500">
+          <div class="text-left">
+            <h1 class="mt-4 mb-3 text-md font-semibold">(1) What are the difference among map, filter, forEach and find in JavaScript?</h1>
+            <div>
+              <p class="text-md">
+                <span class="text-green-600 font-semibold">Answer: </span> <br>
+                Map, filter, forEach, and find are four different array methods in JavaScript, each with their own unique use cases: <br><br>
+                <span class="text-orange-600 font-semibold">Map: </span>Allows transforming each element of an array into a new array of the same length. Map returns a new array with the same number of elements as the original array, but with each element transformed according to the function provided. <br>
+                <span class="text-orange-600 font-semibold">Filter: </span>Allows selecting a subset of elements from an array based on a provided condition. Filter returns a new array with only the elements that satisfy the condition. <br>
+                <span class="text-orange-600 font-semibold">forEach: </span>Allows iterating over each element in an array and performing a specified action for each element. forEach does not return a new array and simply executes a provided function for each element. <br>
+                <span class="text-orange-600 font-semibold">Find: </span>Allows finding the first element in an array that satisfies a provided condition. Find returns the first element in the array that meets the condition, or undefined if no element is found. <br><br>
+                In summary, map is used to transform each element of an array into a new array, filter is used to select a subset of elements based on a condition, forEach is used to execute a function for each element in an array, and find is used to find the first element in an array that meets a condition.
+              </p>
+            </div>
+          </div>
+          <div class="text-left">
+            <h1 class="mt-12 mb-3 text-md font-semibold">(2) What are the difference among localStorage, sessionStorage and cookies in JavaScript?</h1>
+            <div>
+              <p class="text-md">
+                <span class="text-green-600 font-semibold">Answer: </span> <br>
+                localStorage, sessionStorage, and cookies are three different ways to store data in JavaScript, but they have some key differences: <br><br>
+                <span class="text-orange-600 font-semibold">localStorage: </span>Allows storing larger amounts of data (up to 5-10 MB) that will remain even after the browser is closed or the computer is turned off. The data is stored indefinitely or until it is manually cleared by the user. <br>
+                <span class="text-orange-600 font-semibold">sessionStorage: </span>Similar to localStorage, but the data is only available for the duration of the session. This means that the data is lost when the browser tab or window is closed. <br>
+                <span class="text-orange-600 font-semibold">Cookies: </span>Allows storing small amounts of data (up to 4 KB) that can be accessed by both the server and client-side code. Cookies can be set with an expiration time, after which they will be deleted. They can also be restricted to a specific domain or path. <br><br>
+                In summary, localStorage is ideal for long-term storage of larger amounts of data, sessionStorage is best for temporary storage, and cookies are useful for storing small pieces of information that need to be shared between the server and client-side code. <br>
+              </p>
+            </div>
+          </div>
+          <div class="text-left">
+            <h1 class="mt-12 mb-3 text-md font-semibold">(3) What is event loop in JavaScript and how does it work?</h1>
+            <div>
+              <p class="text-md">
+                <span class="text-green-600 font-semibold">Answer: </span> <br>
+                JavaScript is a single-threaded language but it can also handle asynchronous operations using the event loop. The event loop is a mechanism that allows JavaScript to run code, process events, and execute queued tasks in an orderly fashion. The call stack is where JavaScript executes its code, while the callback queue is where it stores functions that are waiting for execution. <br><br>
+                The event loop constantly checks for code on the call stack and moves any function that's ready to be executed from the callback queue to the call stack. <br>
+                There are two types of tasks: microtasks and macrotasks, with the event loop prioritizing microtasks over macrotasks. This means that after every macrotask execution, it will run all microtasks in the queue before moving on to another macrotask.
+                This ensures that microtasks don't get delayed by long-running macrotasks and can update the state of the application quickly.<br>
+                The event loop is what makes JavaScript powerful and versatile. By leveraging its features, we can create responsive web applications that can handle complex logic without compromising user experience. <br><br>
+
+                In summary, JavaScript can handle asynchronous operations using the event loop, despite being a single-threaded language. The event loop allows JavaScript to process events and execute queued tasks in an orderly fashion, with microtasks being prioritized over macrotasks. By leveraging the event loop's features, developers can create responsive web applications without compromising user experience.
+              </p>
+            </div>
+          </div>
+          <div class="text-left">
+            <h1 class="mt-10 mb-3 text-md font-semibold">(4) What are the functionalities of <span class="text-red-500">quizTimer</span> function in <span class="text-red-700">noChange.js</span> file?</h1>
+            <div>
+              <p class="text-md">
+                <span class="text-green-600 font-semibold">Answer: </span> <br>
+                <span class="font-semibold">quizTimer</span> function is a timer function that runs a quiz. <br><br>
+                
+                The function takes <span class="font-semibold">one parameter</span>, which is called <span class="font-semibold">"dismiss"</span>. If <span class="font-semibold">"dismiss"</span> is true, it clears the timer and stops the quiz. <br>
+                When <span class="font-semibold">Submit Quiz</span> button is pressed, at first it checks if all the answers are selected in the quiz. If <span class="font-semibold">(answers.length == 6)</span> which means all answers are selected, then <span class="font-semibold">quizTimer(true)</span> is set to true on click event listener to stop the timer. This is how <span class="font-semibold">"dismiss"</span> is set to true to stop the timer. <br><br>
+                
+                Until <span class="font-semibold">"dismiss"</span> is set to true, this function continues the timer and updates the quiz timer display every second. The timer function increments a <span class="font-semibold">count</span> variable every second, converts the <span class="font-semibold">count</span> variable into <span class="font-semibold">minutes</span> and <span class="font-semibold">seconds</span>, and updates the HTML on the page to display the time consumed for the quiz. <br><br>
+                
+                Additionally, if the <span class="font-semibold">count</span> is greater than 60 seconds, the function alternates the text color of the timer display every second to indicate that the consumed time in quiz is more than 1 minute. <br><br>
+
+                In summary, <span class="font-semibold">quizTimer</span> function is a timer function that runs until the <span class="font-semibold">Sumbit Quiz</span> button is pressed after all the quiz answers are selected (if all answers are not selected the timer will continue). It also updates the HTML by showing the consumed time for the quiz and if the time is more than 60 seconds, it alternates the text color to indicate that the 1 minute limit has passed.
+              </p>
+            </div>
+          </div>
+          <div class="text-left">
+            <h1 class="mt-12 mb-3 text-md font-semibold">(5) What are the functionalities of <span class="text-red-500">chooseQuiz</span> function in <span class="text-red-700">noChange.js</span> file?</h1>
+            <div>
+              <p class="text-md">
+                <span class="text-green-600 font-semibold">Answer: </span> <br>
+                This is a function named <span class="font-semibold">chooseQuiz</span> that takes two arguments: <span class="font-semibold">index</span> and <span class="font-semibold">givenAns</span>. <br>
+                Here, <span class="font-semibold">index</span> indicates the serial number of the selected question and <span class="font-semibold">givenAns</span> is the option selected by the user. <br> <br>
+                The purpose of this function is to update an array of quiz answers called <span class="font-semibold">answers</span> based on the <span class="font-semibold">givenAns</span> provided by the user. <br>
+                This function is triggered when clicking on any of the generated options during the quiz. <br><br>
+
+                In this function, in the first line <span class="font-semibold">isExist</span> variable uses the <span class="font-semibold">find</span> method to search the <span class="font-semibold">answers</span> array for an object that has the same id value as the question being answered <span class="font-semibold">(quizData[index].id)</span>. <br><br>
+                
+                If the answer of a question is already given by the user (isExist is true in that case), the function uses the <span class="font-semibold">splice</span> method to replace the existing quiz object with a new object that combines the <span class="font-semibold">quizData[index]</span> object with the <span class="font-semibold">givenAns</span> value provided by the user. <br><br>
+                If the answer of a question is not given yet, the loop continues until it reaches the end of the <span class="font-semibold">answers</span> array. <br><br>
+
+                If <span class="font-semibold">isExist</span> is false (that means user hasn't given the answer of that question yet), the function enters an <span class="font-semibold">else statement</span> and adds a new object to the <span class="font-semibold">answers</span> array that combines the <span class="font-semibold">quizData[index]</span> object with the <span class="font-semibold">givenAns</span> value provided by the user. <br><br>
+
+                In summary, this function checks if a quiz answer already exists in the answers array and updates it if it does, or adds a new answer to the array if it doesn't. It then calls a separate function named <span class="font-semibold">displayAnswers()</span> by passing the <span class="font-semibold">answers</span> array as parameter to display the updated answers to the user.
+              </p>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+    <!-- Question and Answer Section Ends Here -->
+
+    <!-- Footer section start -->
+    <footer class="py-10 text-center text-sm">
+      Copyright © 2023 Quiz Hero All Rights Reserved.
+    </footer>
+    <!-- Footer section end -->
+  </body>
+</html>
