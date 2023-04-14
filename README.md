@@ -3,7 +3,7 @@
 ## Description
 A simple Assignment with JavaScript and API on Bug Fixing and Debugging.
 
-## Live Link
+## Live Website Link
 https://quiz-hero-shamiul.netlify.app/
 
 
